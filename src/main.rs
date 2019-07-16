@@ -1,8 +1,3 @@
-#![feature(rust_2018_preview)]
-
-#[macro_use] extern crate failure;
-#[macro_use] extern crate serde_derive;
-
 mod config;
 mod key_data;
 mod tests;
@@ -10,7 +5,7 @@ mod tests;
 use std::time::SystemTime;
 
 use ed25519_dalek as ed25519;
-use failure::Error;
+use failure::{bail, Error};
 
 use crate::config::Config;
 use crate::key_data::KeyData;
@@ -63,8 +58,8 @@ fn generate_keypair(userid: String) -> Result<(), Error> {
         return Ok(())
     }
     let timestamp = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)?.as_secs();
-    let mut rng = rand::OsRng::new()?;
-    let keypair = ed25519::Keypair::generate::<sha2::Sha512, _>(&mut rng);
+    let mut rng = rand::rngs::OsRng::new()?;
+    let keypair = ed25519::Keypair::generate(&mut rng);
     let key_data = KeyData::create(keypair, userid, timestamp);
     let config = Config::create(&key_data)?;
 

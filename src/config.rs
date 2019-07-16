@@ -1,7 +1,8 @@
 use std::borrow::Cow;
 use std::io::{Read, Write};
 
-use failure::Error;
+use serde::{Serialize, Deserialize};
+use failure::{bail, Error};
 
 use crate::key_data::KeyData;
 
