@@ -188,6 +188,11 @@ version = "0.2.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "linjepakning"
+version = "0.1.0"
+source = "git+https://github.com/badboy/linjepakning#509ff48dee29300bab6c4cd5d89f2d09cd1f6a39"
+
+[[package]]
 name = "opaque-debug"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -195,7 +200,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "pbp"
 version = "0.4.0"
-source = "git+https://github.com/badboy/pbp?branch=edition-2018#bdb536585c47fc998176ab6c3bd2d7d7368ae31b"
+source = "git+https://github.com/badboy/pbp?branch=edition-2018#6d3f37011a22b982c5b9b8fee53f9f1f91033d16"
 dependencies = [
  "base64 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "bitflags 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -203,6 +208,7 @@ dependencies = [
  "digest 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ed25519-dalek 1.0.0-pre.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "failure 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "linjepakning 0.1.0 (git+https://github.com/badboy/linjepakning)",
  "sha1 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "typenum 1.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -453,6 +459,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum generic-array 0.12.3 (registry+https://github.com/rust-lang/crates.io-index)" = "c68f0274ae0e023facc3c97b2e00f076be70e254bc851d972503b328db79b2ec"
 "checksum hex 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "805026a5d0141ffc30abb3be3173848ad46a1b1664fe632428479619a3644d77"
 "checksum libc 0.2.60 (registry+https://github.com/rust-lang/crates.io-index)" = "d44e80633f007889c7eff624b709ab43c92d708caad982295768a7b13ca3b5eb"
+"checksum linjepakning 0.1.0 (git+https://github.com/badboy/linjepakning)" = "<none>"
 "checksum opaque-debug 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "93f5bb2e8e8dec81642920ccff6b61f1eb94fa3020c5a325c9851ff604152409"
 "checksum pbp 0.4.0 (git+https://github.com/badboy/pbp?branch=edition-2018)" = "<none>"
 "checksum proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)" = "cf3d2011ab5c909338f7887f4fc896d35932e29146c12c8d01da6b22a80ba759"
